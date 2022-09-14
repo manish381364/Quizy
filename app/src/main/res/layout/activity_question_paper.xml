@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
+    tools:context=".QuestionPaper">
+
+        <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/grey"
+            app:cardCornerRadius="10dp"
+            android:padding="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="7dp">
+            <TextView
+                android:id="@+id/total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/total_questions"
+                android:fontFamily="@font/aclonica"
+                android:layout_margin="10dp"
+                android:textSize="18sp"
+                android:textColor="@color/qColor"
+                android:layout_gravity="center|start"/>
+
+            <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+                android:id="@+id/view_results"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="10dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:layout_gravity="end|center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="6dp"
+                    android:fontFamily="@font/aclonica"
+                    android:text="@string/view_results"/>
+
+            </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+        </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+
+       <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:layout_marginStart="5dp"
+           android:layout_marginEnd="5dp"
+           android:layout_marginBottom="10dp"
+           app:cardCornerRadius="20dp"
+           app:cardBackgroundColor="@color/grey">
+           <ListView
+               android:id="@+id/question_list"
+               android:layout_width="match_parent"
+               android:layout_height="match_parent"
+               android:padding="10dp" />
+           <ProgressBar
+               android:id="@+id/progress"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:theme="@style/Theme.Material3.DynamicColors.Dark"
+               android:layout_gravity="center">
+
+           </ProgressBar>
+           <com.google.android.material.button.MaterialButton
+               android:id="@+id/share"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="@string/share"
+               android:layout_margin="20dp"
+               android:textSize="12sp"
+               android:theme="@style/Theme.Material3.DynamicColors.Light"
+               app:cornerRadius="10dp"
+               android:fontFamily="@font/aclonica"
+               android:layout_gravity="bottom|end"
+               android:onClick="share"
+               tools:ignore="UsingOnClickInXml" />
+           <ImageButton
+               android:id="@+id/add"
+               android:layout_width="50dp"
+               android:layout_height="40dp"
+               android:background="#CDF6FF00"
+               android:src="@drawable/ic_add"
+               android:layout_margin="20dp"
+               android:layout_gravity="bottom|start"
+               tools:ignore="UsingOnClickInXml"
+               android:contentDescription="@string/addButton" />
+       </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+
+
+</LinearLayout>

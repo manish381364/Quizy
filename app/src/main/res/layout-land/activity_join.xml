@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".Join">
+
+    <LinearLayout
+        android:id="@+id/pass"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="visible"
+        app:layout_constraintVertical_bias="0.151">
+        <TextView
+            android:id="@+id/Enter_join"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|start"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/adamina"
+            android:text="@string/join"
+            android:textColor="@color/pink2"
+            android:textSize="20sp" />
+
+        <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:cardBackgroundColor="@color/grey"
+            app:cardCornerRadius="30dp"
+            android:layout_marginTop="30dp">
+            <EditText
+                android:id="@+id/key"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/grey"
+                android:hint="@string/ID"
+                android:inputType="text"
+                android:maxHeight="50dp"
+                android:minWidth="170dp"
+                android:minHeight="48dp"
+                android:padding="15dp"
+                android:textColor="@color/white"
+                android:textColorHint="#90A4AE"
+                android:textCursorDrawable="@drawable/cursor"
+                android:autofillHints="" />
+        </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+
+        <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+            android:id="@+id/findID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            app:cardBackgroundColor="@color/grey2"
+            app:cardCornerRadius="15dp"
+            android:clickable="true"
+            android:onClick="Search"
+            android:focusable="true"
+            tools:ignore="UsingOnClickInXml">
+            <TextView
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/adamina"
+                android:text="@string/search"
+                android:textColor="@color/pink"
+                tools:ignore="UsingOnClickInXml" />
+        </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+
+        <ProgressBar
+            android:id="@+id/PB"
+            android:layout_width="67dp"
+            android:layout_height="53dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:theme="@style/Theme.Material3.DynamicColors.Dark"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/Students_Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/adamina"
+            android:text="@string/name"
+            android:textColor="@color/pink2"
+            android:textSize="18sp" />
+
+        <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+            android:layout_width="170dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="30dp"
+            app:cardBackgroundColor="@color/grey"
+            android:layout_gravity="center"
+            app:cardCornerRadius="20dp">
+            <EditText
+                android:id="@+id/enrollment_name"
+                android:layout_width="170dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:background="@color/grey"
+                android:hint="@string/enrollment"
+                android:inputType="text"
+                android:maxHeight="50dp"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:textColorHint="#90A4AE"
+                android:textCursorDrawable="@drawable/cursor"
+                android:autofillHints="" />
+        </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+
+
+        <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+            android:id="@+id/submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            app:cardBackgroundColor="@color/grey2"
+            app:cardCornerRadius="15dp"
+            android:clickable="true"
+            android:onClick="Search"
+            android:focusable="true"
+            tools:ignore="UsingOnClickInXml">
+            <TextView
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/adamina"
+                android:text="@string/submit"
+                android:textColor="@color/pink"
+                tools:ignore="UsingOnClickInXml" />
+        </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+    </LinearLayout>
+
+
+
+
+    <!--    Layout for Questions Displaying   -->
+
+
+
+    <LinearLayout
+        android:id="@+id/QuestionPaper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                app:cardBackgroundColor="@color/grey"
+                app:cardCornerRadius="20dp"
+                android:background="@color/card">
+                <TextView
+                    android:id="@+id/questionDisplay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginBottom="50dp"
+                    android:gravity="center"
+                    android:text="@string/question_no"
+                    android:textColor="@color/qColor"
+                    android:textSize="20sp" />
+            </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+        </LinearLayout>
+        <com.google.android.material.circularreveal.cardview.CircularRevealCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="20dp"
+            app:cardBackgroundColor="@color/grey">
+        <RadioGroup
+            android:id="@+id/options"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@color/black"
+            android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/op1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@color/grey"
+                    android:gravity="center"
+                    android:text="@string/submit"
+                    android:textColor="@color/white" />
+
+                <RadioButton
+                    android:id="@+id/op2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@color/grey"
+                    android:gravity="center"
+                    android:text="@string/submit"
+                    android:textColor="@color/white" />
+
+                <RadioButton
+                    android:id="@+id/op3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@color/grey"
+                    android:gravity="center"
+                    android:text="@string/submit"
+                    android:textColor="@color/white" />
+
+                <RadioButton
+                    android:id="@+id/op4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@color/grey"
+                    android:gravity="center"
+                    android:text="@string/submit"
+                    android:textColor="@color/white" />
+
+        </RadioGroup>
+    </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
+        <Button
+            android:id="@+id/next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/adamina"
+            android:onClick="setNext"
+            android:text="@string/next"
+            android:textColor="@color/qColor"
+            tools:ignore="UsingOnClickInXml" />
+        <ProgressBar
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:theme="@style/Theme.Material3.DynamicColors.Dark"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

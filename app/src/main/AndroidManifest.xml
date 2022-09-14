@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.quizy">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.REORDER_TASKS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/quizphoto"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/quizphoto"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Quizy">
+
+        <activity
+            android:name=".Results"
+            android:exported="false" />
+        <activity
+            android:name=".addQuestion"
+            android:exported="false" />
+        <activity
+            android:name=".reset_password"
+            android:exported="false" />
+        <activity
+            android:name=".profile"
+            android:exported="false"
+            android:label="@string/title_activity_profile" />
+        <activity
+            android:name=".MyQuizzes"
+            android:allowTaskReparenting="true"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".editQuestion"
+            android:exported="false" />
+        <activity
+            android:name=".leaderboard"
+            android:exported="false" />
+        <activity
+            android:name=".sign_in"
+            android:exported="false"
+            android:theme="@style/Theme.Quizy.NoActionBar" />
+        <activity
+            android:name=".login"
+            android:exported="false"
+            android:theme="@style/Theme.Quizy.NoActionBar" />
+        <activity
+            android:name=".FinalScore"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.Quizy.NoActionBar" />
+        <activity
+            android:name=".Join"
+            android:exported="false"
+            android:theme="@style/Theme.Quizy.NoActionBar" />
+        <activity
+            android:name=".CreateQuestionPaper"
+            android:exported="false"
+            android:parentActivityName=".Create" />
+        <activity
+            android:name=".QuestionPaper"
+            android:exported="false"
+            android:parentActivityName=".MyQuizzes" />
+        <activity
+            android:name=".Create"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".launcher"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>
