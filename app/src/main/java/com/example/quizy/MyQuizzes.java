@@ -3,7 +3,6 @@ package com.example.quizy;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.util.Pair;
 import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
@@ -20,7 +19,8 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.android.material.circularreveal.cardview.CircularRevealCardView;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -37,29 +37,25 @@ public class MyQuizzes extends AppCompatActivity {
     TextView result;
     Button create;
     ProgressBar progressBar;
-    CircularRevealCardView delete,viewPaper,delete_view,confirmation,delete2,cancel;
     ListView listView;
     String name;
     ArrayList<String> myQuestionList = new ArrayList<>();
     ArrayList<Pair<String,String>> list = new ArrayList<>();
+    GoogleSignInAccount account;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_my_quizzes);
-        getIntent();
+        create = findViewById(R.id.create);
+        result = findViewById(R.id.result);
         auth = FirebaseAuth.getInstance();
         listView = findViewById(R.id.QList);
         progressBar = findViewById(R.id.progress);
-        create = findViewById(R.id.create);
-        result = findViewById(R.id.result);
-        delete = findViewById(R.id.delete);
-        delete2 = findViewById(R.id.delete2);
-        cancel = findViewById(R.id.cancel);
-        viewPaper = findViewById(R.id.view);
-        delete_view = findViewById(R.id.delete_view);
-        confirmation = findViewById(R.id.confirmation);
-        confirmation.setVisibility(View.GONE);
-        name = Objects.requireNonNull(Objects.requireNonNull(auth.getCurrentUser()).getEmail()).replace(".","DOT").replace("@","AT");
+        account = GoogleSignIn.getLastSignedInAccount(getApplicationContext());
+        if(auth.getCurrentUser()!=null)
+            name = Objects.requireNonNull(Objects.requireNonNull(auth.getCurrentUser()).getEmail()).replace(".","DOT").replace("@","AT");
+        else
+            name = Objects.requireNonNull(Objects.requireNonNull(account.getEmail()).replace(".","DOT").replace("@","AT"));
         databaseReference = FirebaseDatabase.getInstance().getReference().child(name);
 
 
@@ -109,6 +105,8 @@ public class MyQuizzes extends AppCompatActivity {
             }
         });
 
+        create.setOnClickListener(view -> createPaper());
+
         listView.setOnItemClickListener((adapterView, view, i, l) -> {
             if(i>=0 && i<list.size()){
                 viewQuestionPaper(i);
@@ -119,31 +117,19 @@ public class MyQuizzes extends AppCompatActivity {
             new AlertDialog.Builder(new ContextThemeWrapper(this,R.style.AlertDialog)).setTitle("Delete").setMessage("Do you want to delete?").setPositiveButton("Delete", (dialogInterface, I) -> deletePaper(i)).setNegativeButton("Cancel",null).show();
             return true;
         });
-        delete.setOnClickListener(view -> confirmDelete());
-        cancel.setOnClickListener(view -> cancel());
-        create.setOnClickListener(view ->createPaper());
 
     }
 
-    @Override
-    public void onBackPressed() {
-        startActivity(new Intent(getApplicationContext(),profile.class));
-    }
+  
 
     private void viewQuestionPaper(int i) {
         Intent intent = new Intent(getApplicationContext(),QuestionPaper.class);
         intent.putExtra("generated_id",list.get(i).first);
         intent.putExtra("name", name);
+        System.out.println(list.get(i).first);
         startActivity(intent);
     }
-    private void cancel(){
-        confirmation.setVisibility(View.GONE);
-        delete_view.setVisibility(View.VISIBLE);
-    }
-    private void confirmDelete(){
-        delete_view.setVisibility(View.GONE);
-        new Handler().postDelayed(() -> confirmation.setVisibility(View.VISIBLE),200);
-    }
+
 
     public void deletePaper(int i) {
         String to_del = list.get(i).first;
@@ -181,6 +167,7 @@ public class MyQuizzes extends AppCompatActivity {
     }
 
     private void createPaper() {
+        finish();
         startActivity(new Intent(getApplicationContext(),Create.class));
     }
 

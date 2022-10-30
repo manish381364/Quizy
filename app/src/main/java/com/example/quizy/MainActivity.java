@@ -11,6 +11,10 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.material.circularreveal.cardview.CircularRevealCardView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -23,8 +27,9 @@ public class MainActivity extends AppCompatActivity {
     CircularRevealCardView create;
     TextView title;
     TextView name;
-
-
+    GoogleSignInAccount account;
+    GoogleSignInOptions gso;
+    GoogleSignInClient gsc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,18 +45,34 @@ public class MainActivity extends AppCompatActivity {
         super.onStart();
         auth = FirebaseAuth.getInstance();
         FirebaseUser user = auth.getCurrentUser();
-        if(user==null){
+
+        account = GoogleSignIn.getLastSignedInAccount(getApplicationContext());
+        gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN).requestEmail().build();
+        gsc = GoogleSignIn.getClient(getApplicationContext(), gso);
+        if(user==null && account==null){
+            finish();
             startActivity(new Intent(getApplicationContext(),login.class));
         }
         else{
-            auth = FirebaseAuth.getInstance();
-            String user1 = Objects.requireNonNull(auth.getCurrentUser()).getDisplayName();
-            String Name = Objects.requireNonNull(user.getEmail()).split("@")[0];
-            assert user1 != null;
-            if(user1.length()>0){
-                name.setText(user1);
+            if(user!=null){
+                auth = FirebaseAuth.getInstance();
+                String user1 = Objects.requireNonNull(auth.getCurrentUser()).getDisplayName();
+                String Name = Objects.requireNonNull(user.getEmail()).split("@")[0];
+                assert user1 != null;
+                if(user1.length()>0){
+                    name.setText(user1);
+                }
+                else name.setText(Name);
             }
-            else name.setText(Name);
+            else{
+                String user1 = Objects.requireNonNull(account).getDisplayName();
+                String Name = Objects.requireNonNull(account.getEmail()).split("@")[0];
+                assert user1 != null;
+                if(user1.length()>0){
+                    name.setText(user1);
+                }
+                else name.setText(Name);
+            }
         }
     }
 
@@ -71,8 +92,12 @@ public class MainActivity extends AppCompatActivity {
         }
         else{
             new AlertDialog.Builder(new ContextThemeWrapper(this,R.style.AlertDialog)).setTitle("Logout").setMessage("Are you sure you want to sign out?").setPositiveButton("Logout", (dialogInterface, i) -> {
-                auth.signOut();
-                startActivity(new Intent(getApplicationContext(),login.class));
+                if(auth.getCurrentUser() != null) auth.signOut();
+                else gsc.signOut();
+                finish();
+                Intent act = new Intent(getApplicationContext(),login.class);
+                act.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(act);
             }).setNegativeButton("Cancel",null).show();
         }
         return true;

@@ -31,7 +31,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="64dp"
                     android:layout_gravity="center"
-                    android:fontFamily="@font/adamina"
                     android:text="@string/question"
                     android:textColor="@color/qColor"
                     android:textSize="25sp"
@@ -60,8 +59,7 @@
                         android:textCursorDrawable="@drawable/cursor"
                         android:padding="10dp"
                         android:textColor="@color/white"
-                        android:textColorHint="@color/hintTextColor"
-                        android:fontFamily="@font/adamina" />
+                        android:textColorHint="@color/hintTextColor"/>
                 </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
                 <androidx.cardview.widget.CardView
                     android:layout_width="wrap_content"
@@ -84,8 +82,7 @@
                         android:textCursorDrawable="@drawable/cursor"
                         android:padding="10dp"
                         android:textColor="@color/white"
-                        android:textColorHint="@color/hintTextColor"
-                        android:fontFamily="@font/adamina" />
+                        android:textColorHint="@color/hintTextColor" />
                 </androidx.cardview.widget.CardView>
                 <Button
                     android:id="@+id/submit"
@@ -93,7 +90,6 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
                     android:layout_marginBottom="15dp"
-                    android:fontFamily="@font/adamina"
                     android:text="@string/submit"
                     android:padding="10dp"
                     android:layout_gravity="center"

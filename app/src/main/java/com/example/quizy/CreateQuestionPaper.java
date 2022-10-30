@@ -10,6 +10,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -75,17 +77,36 @@ public class CreateQuestionPaper extends AppCompatActivity {
                     q.add(temp);
                     if(count>total){
                         Intent intent1 = new Intent(getApplicationContext(),QuestionPaper.class);
-                        String name = Objects.requireNonNull(Objects.requireNonNull(auth.getCurrentUser()).getEmail()).replace(".","DOT").replace("@","AT");
-                        databaseReference = FirebaseDatabase.getInstance().getReference();
-                        String ID = databaseReference.child(name).push().getKey();
-                        assert ID != null;
-                        databaseReference.child(name).child(ID).child("totalQuestions").setValue(Integer.toString(total));
-                        databaseReference.child(name).child(ID).child("subject").setValue(subject);
-                        for(int i=0;i<q.size();i++){
-                            databaseReference.child(name).child(ID).child(Integer.toString(i+1)).setValue(q.get(i));
+                        String name;
+                        String ID;
+                        if(auth.getCurrentUser() != null) {
+                            name = Objects.requireNonNull(Objects.requireNonNull(auth.getCurrentUser()).getEmail()).replace(".","DOT").replace("@","AT");
+                            databaseReference = FirebaseDatabase.getInstance().getReference();
+                            ID = databaseReference.child(name).push().getKey();
+                            assert ID != null;
+                            databaseReference.child(name).child(ID).child("totalQuestions").setValue(Integer.toString(total));
+                            databaseReference.child(name).child(ID).child("subject").setValue(subject);
+                            for(int i=0;i<q.size();i++){
+                                databaseReference.child(name).child(ID).child(Integer.toString(i+1)).setValue(q.get(i));
+                            }
+                        }
+                        else{
+                            GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(getApplicationContext());
+                            assert account != null;
+                            name = Objects.requireNonNull(Objects.requireNonNull(account.getEmail()).replace(".","DOT").replace("@","AT"));
+                            databaseReference = FirebaseDatabase.getInstance().getReference();
+                            databaseReference.push();
+                            ID = databaseReference.child(name).push().getKey();
+                            assert ID != null;
+                            databaseReference.child(name).child(ID).child("totalQuestions").setValue(Integer.toString(total));
+                            databaseReference.child(name).child(ID).child("subject").setValue(subject);
+                            for(int i=0;i<q.size();i++){
+                                databaseReference.child(name).child(ID).child(Integer.toString(i+1)).setValue(q.get(i));
+                            }
                         }
                         intent1.putExtra("generated_id",ID);
                         intent1.putExtra("name",name);
+                        finish();
                         startActivity(intent1);
                     }
                 }

@@ -4,12 +4,12 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -29,7 +29,7 @@ public class editQuestion extends AppCompatActivity {
     EditText op3;
     EditText op4;
     EditText ans;
-    Button submit;
+    AppCompatButton submit;
     String Name;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -110,6 +110,9 @@ public class editQuestion extends AppCompatActivity {
                 },1000);
                 Intent intent1 = new Intent(getApplicationContext(),QuestionPaper.class);
                 intent1.putExtra("generated_id",id);
+                intent1.putExtra("name", Name);
+                System.out.println(id);
+                finish();
                 startActivity(intent1);
             }
 

@@ -119,7 +119,6 @@
                     android:padding="20dp"
                     android:text="@string/delete_confirmation"
                     android:textColor="@color/pink2"
-                    android:fontFamily="@font/adamina"
                     android:background="@color/grey"/>
             </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
 

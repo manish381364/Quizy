@@ -23,7 +23,6 @@ public class Create extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create);
-        getIntent();
         hook();
         submit.setOnClickListener(view -> Submit());
     }
@@ -52,6 +51,7 @@ public class Create extends AppCompatActivity {
             Intent intent1 = new Intent(getApplicationContext(),CreateQuestionPaper.class);
             intent1.putExtra("noOfQuestions",ques);
             intent1.putExtra("subject",Subject);
+            finish();
             startActivity(intent1);
         }
         catch (Exception e){

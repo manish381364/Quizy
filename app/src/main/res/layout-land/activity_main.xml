@@ -14,8 +14,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:fontFamily="@font/aclonica"
             android:text="@string/welcome_to_quizy"
+            android:fontFamily="@font/aclonica"
             android:textColor="#D523F4"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -27,8 +27,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:fontFamily="@font/actor"
             android:layout_marginTop="40dp"
-            android:fontFamily="@font/aclonica"
             android:textColor="#D523F4"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -72,12 +72,12 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/aladin"
                     android:paddingLeft="30dp"
                     android:paddingTop="10dp"
                     android:paddingRight="30dp"
                     android:paddingBottom="10dp"
                     android:text="@string/create"
+                    android:fontFamily="@font/actor"
                     android:textColor="#FF5D9D"
                     android:textSize="20sp" />
 
@@ -100,7 +100,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/aladin"
+                    android:fontFamily="@font/actor"
                     android:paddingLeft="30dp"
                     android:paddingTop="10dp"
                     android:paddingRight="30dp"

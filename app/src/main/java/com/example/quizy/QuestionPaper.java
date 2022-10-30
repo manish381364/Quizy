@@ -15,6 +15,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.circularreveal.cardview.CircularRevealCardView;
 import com.google.firebase.auth.FirebaseAuth;
@@ -110,7 +111,6 @@ public class QuestionPaper extends AppCompatActivity {
             intent1.putExtra("name",Name);
             startActivity(intent1);
         });
-
         add.setOnClickListener(view -> addQuestion());
         Results.setOnClickListener(view ->showResults());
 
@@ -125,7 +125,7 @@ public class QuestionPaper extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        startActivity(new Intent(getApplicationContext(),MyQuizzes.class));
+        startActivity(new Intent(getApplicationContext(),MainActivity.class));
     }
 
     private void addQuestion() {

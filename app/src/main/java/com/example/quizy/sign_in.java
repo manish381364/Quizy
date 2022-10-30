@@ -11,7 +11,6 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 import androidx.cardview.widget.CardView;
@@ -44,7 +43,6 @@ public class sign_in extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
-        getIntent();
         auth = FirebaseAuth.getInstance();
         hook();
         String userName = Objects.requireNonNull(name.getText()).toString();
@@ -148,6 +146,7 @@ public class sign_in extends AppCompatActivity {
                                         Toast.makeText(sign_in.this, "Verification Email send to"+Email, Toast.LENGTH_SHORT).show();
                                         new Handler().postDelayed(() -> {
                                             Toast.makeText(sign_in.this, "Registration Successful", Toast.LENGTH_SHORT).show();
+                                            finish();
                                             startActivity(new Intent(getApplicationContext(), login.class));
                                         },1000);
                                     }
@@ -170,8 +169,12 @@ public class sign_in extends AppCompatActivity {
                     confirm_layout.requestFocus();
                 }
         });
-        Login.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), com.example.quizy.login.class)));
+        Login.setOnClickListener(view -> {
+            finish();
+            startActivity(new Intent(getApplicationContext(), login.class));
+        });
     }
+
     private void hook() {
         progressBar = findViewById(R.id.progress);
         sign_in = findViewById(R.id.sign_in);

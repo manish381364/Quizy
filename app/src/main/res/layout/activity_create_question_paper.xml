@@ -15,7 +15,6 @@
                 android:id="@+id/enter_question"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:fontFamily="@font/adamina"
                 android:gravity="center"
                 android:text="@string/question_no"
                 android:textColor="#D523F4"
@@ -164,8 +163,7 @@
                     android:text="@string/ans_hint"
                     android:textColor="@color/white"
                     android:layout_gravity="center|start"
-                    android:layout_marginStart="20dp"
-                    android:fontFamily="@font/adamina"/>
+                    android:layout_marginStart="20dp" />
 
                 <EditText
                     android:id="@+id/ans"
@@ -188,7 +186,6 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="50dp"
-                android:fontFamily="@font/adamina"
                 android:text="@string/next"
                 android:textColor="#D87CE8" />
         </LinearLayout>

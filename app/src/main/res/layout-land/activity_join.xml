@@ -26,7 +26,6 @@
             android:layout_gravity="center|start"
             android:layout_marginStart="20dp"
             android:layout_marginTop="10dp"
-            android:fontFamily="@font/adamina"
             android:text="@string/join"
             android:textColor="@color/pink2"
             android:textSize="20sp" />
@@ -75,7 +74,6 @@
                 android:paddingBottom="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/adamina"
                 android:text="@string/search"
                 android:textColor="@color/pink"
                 tools:ignore="UsingOnClickInXml" />
@@ -96,7 +94,6 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:fontFamily="@font/adamina"
             android:text="@string/name"
             android:textColor="@color/pink2"
             android:textSize="18sp" />
@@ -144,7 +141,6 @@
                 android:paddingBottom="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/adamina"
                 android:text="@string/submit"
                 android:textColor="@color/pink"
                 tools:ignore="UsingOnClickInXml" />
@@ -254,7 +250,6 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="30dp"
-            android:fontFamily="@font/adamina"
             android:onClick="setNext"
             android:text="@string/next"
             android:textColor="@color/qColor"
