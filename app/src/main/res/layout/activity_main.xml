@@ -55,6 +55,10 @@
 
         </com.google.android.material.circularreveal.cardview.CircularRevealCardView>
 
+
+
+
+
         <com.google.android.material.circularreveal.cardview.CircularRevealCardView
             android:id="@+id/create"
             android:layout_width="wrap_content"
@@ -72,7 +76,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/aladin"
+                    android:fontFamily="@font/aclonica"
                     android:paddingLeft="30dp"
                     android:paddingTop="10dp"
                     android:paddingRight="30dp"
@@ -100,11 +104,11 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/aladin"
                     android:paddingLeft="30dp"
                     android:paddingTop="10dp"
                     android:paddingRight="30dp"
                     android:paddingBottom="10dp"
+                    android:fontFamily="@font/aclonica"
                     android:text="@string/joinTEXT"
                     android:textColor="#FF5D9D"
                     android:textSize="20sp" />

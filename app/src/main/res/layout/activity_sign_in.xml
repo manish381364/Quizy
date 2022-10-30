@@ -64,7 +64,6 @@
                     android:paddingEnd="10dp"
                     android:paddingTop="10dp"
                     android:textCursorDrawable="@drawable/cursor"
-                    android:fontFamily="@font/adamina"
                     android:autofillHints="emailAddress"
                     android:paddingBottom="10dp"
                     android:background="@drawable/corners">
@@ -95,7 +94,6 @@
                     android:paddingEnd="10dp"
                     android:paddingTop="10dp"
                     android:textCursorDrawable="@drawable/cursor"
-                    android:fontFamily="@font/adamina"
                     android:autofillHints="emailAddress"
                     android:paddingBottom="10dp"
                     android:background="@drawable/corners">
@@ -140,7 +138,6 @@
                         android:textColor="@color/white"
                         android:hint="@string/password"
                         android:textColorHint="@color/grey2"
-                        android:fontFamily="@font/adamina"
                         android:textCursorDrawable="@drawable/cursor"
                         android:paddingStart="20dp"
                         android:paddingEnd="10dp"
@@ -175,7 +172,6 @@
                         android:textColor="@color/white"
                         android:hint="@string/conform_password"
                         android:textColorHint="@color/grey2"
-                        android:fontFamily="@font/adamina"
                         android:textCursorDrawable="@drawable/cursor"
                         android:paddingStart="20dp"
                         android:paddingEnd="10dp"

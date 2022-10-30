@@ -125,7 +125,7 @@ public class QuestionPaper extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        startActivity(new Intent(getApplicationContext(),MyQuizzes.class));
+        startActivity(new Intent(getApplicationContext(),MainActivity.class));
     }
 
     private void addQuestion() {

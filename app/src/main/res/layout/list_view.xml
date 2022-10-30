@@ -17,7 +17,6 @@
                     android:textColor="@color/list_color"
                     android:textSize="16sp"
                     android:paddingStart="8dp"
-                    android:fontFamily="@font/adamina"
                     android:paddingBottom="10dp"
                     android:paddingEnd="10dp"
                     android:paddingTop="10dp"
