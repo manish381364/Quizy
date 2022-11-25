@@ -172,14 +172,12 @@
             android:textCursorDrawable="@drawable/cursor" />
     </androidx.cardview.widget.CardView>
 
-    <androidx.appcompat.widget.AppCompatButton
+    <Button
         android:id="@+id/submit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="15dp"
         android:layout_gravity="center"
         android:layout_marginTop="50dp"
-        android:shadowRadius="@integer/material_motion_duration_long_2"
-        android:text="@string/submit"/>
+        android:text="@string/submit" />
 
 </LinearLayout>
