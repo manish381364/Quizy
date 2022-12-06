@@ -32,7 +32,7 @@ USER REGISTRATION ACTIVITY
 
 <img src="https://user-images.githubusercontent.com/76205659/205498708-c1251dd4-9ad5-40ee-9c5c-b51e2f2cd8e2.png" width="500">
 
-User can register using eEmail, user name and password. After registration is done user have to verify their Email to coninue further. After Email verification User can login using Email and password
+User can register using Email, user name and password. After registration is done user have to verify their Email to continue further. After Email verification User can login using Email and password
 Finally User is good to go.
 
 LOGIN ACTIVITY
@@ -50,7 +50,7 @@ MAIN ACTIVITY
 1. Join Quiz
 
 
-When user is successfully signed in user can start using app. User can start with joining  quiz by clicking on join button whree user will prompted to enter a unique joining ID which is shared by the questtion paper setter who has set the question paper. If the joing ID is valid then user can enter their Enrollment no. Name/ID Unique credentials and start with quiz.
+When user is successfully signed in user can start using app. User can start with joining  quiz by clicking on join button where user will prompted to enter a unique joining ID which is shared by the question paper setter who has set the question paper. If the joing ID is valid then user can enter their Enrollment no. Name/ID Unique credentials and start with quiz.
 
 JOIN QUIZ ACTIVITY
 
