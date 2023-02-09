@@ -65,7 +65,7 @@
     <string name="tab_text_2">Tab 2</string>
     <string name="Toolbar">toolbar</string>
     <string name="my_question_papers">My Question Papers</string>
-    <string name="app_version">Quizy v 1.0.0</string>
+    <string name="app_version">Quizy Version: 2.1.0</string>
     <string name="enter_email">Enter Email</string>
     <string name="otp">Enter OTP</string>
     <string name="your_list_is_empty">Your List is Empty</string>
