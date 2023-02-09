@@ -14,6 +14,7 @@ import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.material.circularreveal.cardview.CircularRevealCardView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.squareup.picasso.Picasso;
 
 import java.util.Objects;
 
@@ -48,6 +49,7 @@ public class profile extends AppCompatActivity {
         else{
             GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(getApplicationContext());
             assert account != null;
+            Picasso.get().load( Objects.requireNonNull(account.getPhotoUrl()).toString()).into(profileImage);
             name.setText(account.getDisplayName());
             mail.setText(account.getEmail());
         }
