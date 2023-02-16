@@ -30,21 +30,21 @@ User can signup/Login using Google sign up method for easy login or user can set
 
 USER REGISTRATION ACTIVITY
 
-<img src="https://user-images.githubusercontent.com/76205659/205498708-c1251dd4-9ad5-40ee-9c5c-b51e2f2cd8e2.png" width="500">
+<img src="https://user-images.githubusercontent.com/76205659/205498708-c1251dd4-9ad5-40ee-9c5c-b51e2f2cd8e2.png" width="300">
 
 User can register using Email, user name and password. After registration is done user have to verify their Email to continue further. After Email verification User can login using Email and password
 Finally User is good to go.
 
 LOGIN ACTIVITY
 
-<img src="https://user-images.githubusercontent.com/76205659/205493005-7f6c6173-8ecb-4e0d-998c-6a0358b3f796.png" width="500">
+<img src="https://user-images.githubusercontent.com/76205659/205493005-7f6c6173-8ecb-4e0d-998c-6a0358b3f796.png" width="300">
 
 User can start with creating quizzes or joining quizzes!
 
 
 MAIN ACTIVITY
 
-<img src="https://user-images.githubusercontent.com/76205659/205495161-3aff4f0c-4394-4a0b-af10-110d6439ffd0.png" width="500">
+<img src="https://user-images.githubusercontent.com/76205659/205495161-3aff4f0c-4394-4a0b-af10-110d6439ffd0.png" width="300">
 
 
 1. Join Quiz
@@ -54,7 +54,7 @@ When user is successfully signed in user can start using app. User can start wit
 
 JOIN QUIZ ACTIVITY
 
-<img src="https://user-images.githubusercontent.com/76205659/205498024-2018a7e5-bfc7-4a2f-a19f-d42f50aa43c4.png" width="500">
+<img src="https://user-images.githubusercontent.com/76205659/205498024-2018a7e5-bfc7-4a2f-a19f-d42f50aa43c4.png" width="300">
 
 
 2. Create Question Set
@@ -63,30 +63,30 @@ User can create question paper set by clicking on create button which will start
 
 SET QUESTIONS AND SUBJECT ACTIVITY
 
-<img src="https://user-images.githubusercontent.com/76205659/205497600-2b280b52-b2e7-4cb8-a690-d10b2f52a1bc.png" width="500">
+<img src="https://user-images.githubusercontent.com/76205659/205497600-2b280b52-b2e7-4cb8-a690-d10b2f52a1bc.png" width="300">
 
 After setting user will be directed to Question Paper screen where user can add questions and set the answers accordingly. 
 
 
 QUESTION ACTIVITY SCREEN
 
-<img src="https://user-images.githubusercontent.com/76205659/205502149-8dc147ec-424a-4c07-aeec-9ab51201974c.png" width="500">
+<img src="https://user-images.githubusercontent.com/76205659/205502149-8dc147ec-424a-4c07-aeec-9ab51201974c.png" width="300">
 
 QUESTION PAPER ACTIVITY SCREEN
 
-<img src="https://user-images.githubusercontent.com/76205659/205502154-c4be3c84-84c6-42fd-8fc4-13592fc58349.png" width="500">
+<img src="https://user-images.githubusercontent.com/76205659/205502154-c4be3c84-84c6-42fd-8fc4-13592fc58349.png" width="300">
 
 ANSWER ACTIVITY SCREEN
 
-<img src="https://user-images.githubusercontent.com/76205659/205502270-1da60184-f4c0-43c3-98a4-f111eb80e368.png" width="500">
+<img src="https://user-images.githubusercontent.com/76205659/205502270-1da60184-f4c0-43c3-98a4-f111eb80e368.png" width="300">
 
 LEADERBOARD ACTIVITY SCREEN
 
-<img src="https://user-images.githubusercontent.com/76205659/205502256-f8256de4-9b6c-4bb2-b040-9671fc422873.png" width="500">
+<img src="https://user-images.githubusercontent.com/76205659/205502256-f8256de4-9b6c-4bb2-b040-9671fc422873.png" width="300">
 
 RESULT ACTIVITY SCREEN
 
-<img src="https://user-images.githubusercontent.com/76205659/205502284-5302f074-944b-4edc-a7dc-f6f2ed2a8a31.png" width="500">
+<img src="https://user-images.githubusercontent.com/76205659/205502284-5302f074-944b-4edc-a7dc-f6f2ed2a8a31.png" width="300">
 
 PROFILE ACTIVITY SCREEN
 
@@ -94,7 +94,7 @@ PROFILE ACTIVITY SCREEN
 
 
 
-<img src="https://user-images.githubusercontent.com/76205659/205503953-a8eb62ac-5368-486a-940a-958ff8d806bc.png" width="500">
+<img src="https://user-images.githubusercontent.com/76205659/205503953-a8eb62ac-5368-486a-940a-958ff8d806bc.png" width="300">
 
 
 Screen Shots Of Different Activity Screens
