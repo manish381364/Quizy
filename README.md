@@ -99,3 +99,23 @@ PROFILE ACTIVITY SCREEN
 
 Screen Shots Of Different Activity Screens
 
+How to use the app:
+
+1. User registration: Users can register using their email, username, and password. After registration, users have to verify their email to continue using the app.
+2. Login: Users can log in using their registered email and password or using Google sign-up method.
+3. Join quiz: Once logged in, users can join quizzes by entering a unique joining ID shared by the question paper setter. If the joining ID is valid, users can enter their enrollment number, name/ID, and unique credentials to start the quiz.
+4. Create question set: Users can create a question paper set by clicking on the create button, where they will be prompted to enter the subject name and the total number of questions to be added.
+5. Set questions and answers: After setting the subject, users will be directed to the question paper screen, where they can add questions and set the answers accordingly.
+6. Leaderboard: The app has a leaderboard activity screen that displays the scores of all the users who have taken the quiz.
+7. Result: After the quiz, users can view their results in the result activity screen.
+8. Profile: Users can view and edit their profile in the profile activity screen.
+
+
+Overall, this app provides a simple and user-friendly platform for conducting quizzes, making it suitable for both educational and recreational purposes.
+
+
+
+
+
+
+
